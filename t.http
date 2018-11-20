@@ -1,0 +1,28 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://www.haojunqian.cn:8080/register
+Content-Type: application/json
+Postman-Token: 2abc972f-73de-4d5b-9b5a-f47a4e2b6470
+cache-control: no-cache
+{
+    "username":"a",
+	"password":"a",
+	"role":"1"
+}
+
+###
+
+POST http://www.haojunqian.cn:8080/login
+Content-Type: application/json
+cache-control: no-cache
+{
+    username:"a"
+	password:"a"
+}
+
+###

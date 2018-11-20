@@ -1,8 +1,8 @@
 {
-  "cordova-hot-code-push-plugin": {
+  "cordova-plugin-whitelist": {
     "source": {
       "type": "registry",
-      "id": "cordova-hot-code-push-plugin"
+      "id": "cordova-plugin-whitelist@1"
     },
     "is_top_level": true,
     "variables": {}
