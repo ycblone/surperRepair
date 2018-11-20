@@ -8,10 +8,11 @@ cache:
 
 # S: Build Lifecycle
 install:
+  - cd RepairVue
   - npm install
 
 before_script:
-  - cd RepairVue
+
 
 script:
   - npm run build
