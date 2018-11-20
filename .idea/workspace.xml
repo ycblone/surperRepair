@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":green_heart: 修复 CI 构建">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,9 +35,9 @@
           <entry key="http" value="70" />
           <entry key="js" value="133" />
           <entry key="json" value="55" />
-          <entry key="txt" value="27" />
+          <entry key="txt" value="52" />
           <entry key="vue" value="651" />
-          <entry key="yml" value="25" />
+          <entry key="yml" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -46,9 +45,9 @@
           <entry key="HTTP Request" value="70" />
           <entry key="JSON" value="55" />
           <entry key="JavaScript" value="133" />
-          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="PLAIN_TEXT" value="52" />
           <entry key="Vue.js" value="651" />
-          <entry key="YAML" value="25" />
+          <entry key="YAML" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+            <state relative-caret-position="220">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -98,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="180">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -159,9 +158,9 @@
       <path value="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="687" />
-    <option name="y" value="249" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="468" />
+    <option name="y" value="60" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -490,7 +489,7 @@
       <workItem from="1541984373441" duration="7900000" />
       <workItem from="1542074517960" duration="802000" />
       <workItem from="1542700376308" duration="2009000" />
-      <workItem from="1542702530376" duration="1135000" />
+      <workItem from="1542702530376" duration="1730000" />
     </task>
     <task id="LOCAL-00001" summary=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
       <created>1542702759021</created>
@@ -499,11 +498,25 @@
       <option name="project" value="LOCAL" />
       <updated>1542702759021</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=":construction_worker: 添加 CI 构建到系统&#10;&#10;- 测试ci">
+      <created>1542703919829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542703919829</updated>
+    </task>
+    <task id="LOCAL-00003" summary=":green_heart: 修复 CI 构建">
+      <created>1542704211161</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542704211161</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41670000" />
+    <option name="totallyTimeSpent" value="42265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,10 +528,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="468" y="60" width="697" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20982143" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.4279211" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -582,7 +595,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件" />
-    <option name="LAST_COMMIT_MESSAGE" value=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件" />
+    <MESSAGE value=":construction_worker: 添加 CI 构建到系统&#10;&#10;- 测试ci" />
+    <MESSAGE value=":green_heart: 修复 CI 构建" />
+    <option name="LAST_COMMIT_MESSAGE" value=":green_heart: 修复 CI 构建" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RepairVue/index.html">
@@ -736,15 +751,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="180">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        <state relative-caret-position="220">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
         </state>
       </provider>
     </entry>
