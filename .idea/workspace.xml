@@ -1,74 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T091042.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T091246.415.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T091348.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T091446.415.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T092151.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T092902.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T094329.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T094335.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T094345.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T095236.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-11T095956.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-12T091754.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-12T091801.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-12T091819.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2018-11-12T091826.400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/Register.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/android.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/NOTICE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/RELEASENOTES.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/de/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/es/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/fr/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/it/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/ja/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/ko/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/pl/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/doc/zh/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-whitelist/src/android/WhitelistPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/ios.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/t.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/static/css/app.a6337fd1480702e5c6f1322828b4f0ef.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/static/css/app.a6337fd1480702e5c6f1322828b4f0ef.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/static/fonts/element-icons.6f0a763.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/static/js/app.1eb350f714aa93f83536.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/static/js/app.1eb350f714aa93f83536.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/static/js/vendor.ededc5d432b057a6cc15.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/static/js/vendor.ededc5d432b057a6cc15.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/components/Test.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/fetch.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fetch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/css/app.30790115300ab27614ce176899523b62.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/css/app.30790115300ab27614ce176899523b62.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/app.b22ce679862c47a75225.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/app.b22ce679862c47a75225.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/vendor.2420502e2b2c7f321d64.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/vendor.2420502e2b2c7f321d64.js.map" beforeDir="false" />
+    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
+      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -86,12 +22,13 @@
         <counts>
           <entry key="project.closed" value="6" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.43" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -99,8 +36,9 @@
           <entry key="http" value="70" />
           <entry key="js" value="133" />
           <entry key="json" value="55" />
-          <entry key="txt" value="8" />
+          <entry key="txt" value="27" />
           <entry key="vue" value="651" />
+          <entry key="yml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -108,8 +46,9 @@
           <entry key="HTTP Request" value="70" />
           <entry key="JSON" value="55" />
           <entry key="JavaScript" value="133" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="PLAIN_TEXT" value="27" />
           <entry key="Vue.js" value="651" />
+          <entry key="YAML" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -117,23 +56,25 @@
           <entry key="html" value="1" />
           <entry key="http" value="2" />
           <entry key="js" value="5" />
-          <entry key="json" value="5" />
+          <entry key="json" value="6" />
           <entry key="md" value="1" />
           <entry key="ts" value="2" />
           <entry key="vue" value="10" />
           <entry key="xml" value="1" />
+          <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
           <entry key="HTTP Request" value="2" />
-          <entry key="JSON" value="5" />
+          <entry key="JSON" value="6" />
           <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="TypeScript" value="2" />
           <entry key="Vue.js" value="10" />
           <entry key="XML" value="1" />
+          <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -145,47 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Login.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="8" selection-start-line="1" selection-start-column="2" selection-end-line="22" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Register.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RepairVue/src/App.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Index.vue">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#van-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#van-row#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -193,35 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-740">
-              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="200">
+              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -253,10 +131,11 @@
         <option value="$PROJECT_DIR$/RepairVue/src/components/Register.vue" />
         <option value="$PROJECT_DIR$/RepairVue/src/components/Login.vue" />
         <option value="$PROJECT_DIR$/RepairVue/src/App.vue" />
-        <option value="$PROJECT_DIR$/RepairVue/src/components/Index.vue" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/RepairVue/package.json" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/Index.vue" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -281,7 +160,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
+    <option name="x" value="687" />
+    <option name="y" value="249" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -304,12 +184,7 @@
             <path>
               <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
-              <item name="www" type="462c0819:PsiDirectoryNode" />
+              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -615,11 +490,20 @@
       <workItem from="1541984373441" duration="7900000" />
       <workItem from="1542074517960" duration="802000" />
       <workItem from="1542700376308" duration="2009000" />
+      <workItem from="1542702530376" duration="1135000" />
     </task>
+    <task id="LOCAL-00001" summary=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
+      <created>1542702759021</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542702759021</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40535000" />
+    <option name="totallyTimeSpent" value="41670000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -631,12 +515,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20982143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32991454" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4" />
@@ -693,6 +579,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件" />
+    <option name="LAST_COMMIT_MESSAGE" value=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RepairVue/index.html">
@@ -756,27 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/android.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -806,24 +675,52 @@
         <state relative-caret-position="-109" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/HelloWorld.vue" />
+    <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-740">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="300">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/HelloWorld.vue">
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="28" lean-forward="true" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        <state relative-caret-position="260">
+          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#van-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#van-row#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RepairVue/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -837,23 +734,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Register.vue">
+    <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+        <state relative-caret-position="200">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Index.vue">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#van-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#van-row#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
         </state>
       </provider>
     </entry>

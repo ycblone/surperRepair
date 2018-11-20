@@ -1,0 +1,18 @@
+language: node_js
+
+# Travis-CI Caching
+cache:
+  directories:
+  - node_modules
+
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+before_script:
+  - cd RepairVue
+
+script:
+  - npm run build
+
