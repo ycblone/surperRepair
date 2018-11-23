@@ -1,5 +1,19 @@
 [![Build Status](https://travis-ci.org/Wevan/Repair.svg?branch=master)](https://travis-ci.org/Wevan/Repair)
 
+# 安装依赖
+
+先确保安装好 `node` 环境和 `npm`
+
+在项目根目录下安装 `Cordova` 的依赖,`npm install`。
+
+安装完成后 打开到 `RepairVue` 目录
+
+执行 `npm install` 安装 `vue.js` 依赖
+
+# 调试
+
+在 `RepairVue` 目录下运行 `npm run dev`,打开浏览器 'http://localhost:8080'
+
 
 # 编译环境
 
