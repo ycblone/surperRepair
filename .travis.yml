@@ -11,6 +11,7 @@ before_install:
 
 # S: Build Lifecycle
 install:
+  - npm i npm@latest -g
   - npm install
 
 before_script:
