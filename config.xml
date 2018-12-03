@@ -23,6 +23,9 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <plugin name="jpush-phonegap-plugin" spec="^3.5.1">
+        <variable name="APP_KEY" value="cee44a669e04b2a2e05e0a1e" />
+    </plugin>
     <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="7.0.0" />
 </widget>

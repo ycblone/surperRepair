@@ -1,28 +1,50 @@
 <template>
-  <div class="content">
 
-    <!--Login-->
-    <div style="margin-top:30px;padding:10px ;">
+  <div class="content">
+    <van-nav-bar
+      title="注册"
+      left-text="返回"
+      left-arrow
+      @click-left="onClickLeft"
+    />
+    <div style="margin-top:30px;margin-right: 20px">
 
       <div class="title">
         <h2>注册</h2>
       </div>
-      <el-input class="input-group" v-model="username" v-on:focus="errmiss"
-                placeholder="请输入用户名">
-      </el-input>
-      <el-input class="input-group" type="password" v-model="password" v-on:focus="errmiss"
-                placeholder="请输入密码">
-      </el-input>
+      <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="20px" class="demo-ruleForm">
 
-      <el-input class="input-group" type="password" v-model="repassword" v-on:focus="errmiss"
-                placeholder="请输入密码">
-      </el-input>
-      <div style="float: left;margin-top: 10px">
-        <van-checkbox v-model="checked">管理员</van-checkbox>
-      </div>
-      <div v-show="notnull">用户名或密码不能为空</div>
-      <!--<el-button type="primary" style="margin-top: 10px" class="input-group btn-login" @click="test">登录</el-button>-->
-      <el-button type="primary" class="input-group btn-login" @click="login" :loading="loading">登录</el-button>
+        <el-form-item prop="username">
+          <el-input class="input-group" v-model="ruleForm2.username" placeholder="用户名"></el-input>
+        </el-form-item>
+        <el-form-item prop="pass">
+          <el-input type="password" v-model="ruleForm2.pass" autocomplete="off" placeholder="密码"></el-input>
+        </el-form-item>
+        <el-form-item prop="checkPass">
+          <el-input type="password" v-model="ruleForm2.checkPass" autocomplete="off" placeholder="确认密码"></el-input>
+        </el-form-item>
+
+        <el-form-item>
+          <el-select v-model="value7" placeholder="请选择" style="width: 100%;margin-top: 8px">
+            <el-option-group
+              v-for="group in options3"
+              :key="group.label"
+              :label="group.label">
+              <el-option
+                v-for="item in group.options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-option-group>
+          </el-select>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="submitForm('ruleForm2')">提交</el-button>
+          <el-button @click="resetForm('ruleForm2')">重置</el-button>
+          <!--<el-button @click="test">重置</el-button>-->
+        </el-form-item>
+      </el-form>
 
 
     </div>
@@ -34,74 +56,166 @@
   export default {
     name: "login",
     data() {
+      /**
+       * 表单验证
+       * @param rule
+       * @param value
+       * @param callback
+       * @returns {*}
+       */
+      var checkAge = (rule, value, callback) => {
+        if (!value) {
+          return callback(new Error('年龄不能为空'));
+        }
+        setTimeout(() => {
+          if (!Number.isInteger(value)) {
+            callback(new Error('请输入数字值'));
+          } else {
+            if (value < 18) {
+              callback(new Error('必须年满18岁'));
+            } else {
+              callback();
+            }
+          }
+        }, 1000);
+      };
+      var checkUsername = (rule, value, callback) => {
+        if (!value) {
+          return callback(new Error('用户名不能为空'));
+        } else {
+          callback();
+        }
+      };
+      var validatePass = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请输入密码'));
+        } else {
+          if (this.ruleForm2.checkPass !== '') {
+            this.$refs.ruleForm2.validateField('checkPass');
+          }
+          callback();
+        }
+      };
+      var validatePass2 = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请再次输入密码'));
+        } else if (value !== this.ruleForm2.pass) {
+          callback(new Error('两次输入密码不一致!'));
+        } else {
+          callback();
+        }
+      };
       return {
-        username: '',
-        password: '',
-        repassword: '',
         message: "测试数据",
         loading: false,
         msg: false,
         notnull: false,
         checked: false,
-        classId: ""
+        classId: "",
+        options3: [{
+          label: '选择角色',
+          options: [{
+            value: 1,
+            label: '物业'
+          }, {
+            value: 2,
+            label: '维保企业'
+          }]
+        }],
+        value7: '',
+        ruleForm2: {
+          username: '',
+          pass: '',
+          checkPass: '',
+          age: ''
+        },
+        rules2: {
+          username: [
+            {validator: checkUsername, trigger: 'blur'}
+          ],
+          pass: [
+            {validator: validatePass, trigger: 'blur'}
+          ],
+          checkPass: [
+            {validator: validatePass2, trigger: 'blur'}
+          ],
+          age: [
+            {validator: checkAge, trigger: 'blur'}
+          ]
+        }
       };
     },
 
     methods: {
-      errmiss: function () {
-        if (this.msg === true || this.notnull === true) {
-          this.msg = false;
-          this.notnull = false;
-        }
+
+      /**
+       * 表单提交与重置
+       * @param formName
+       */
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            this.register();
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      },
+      resetForm(formName) {
+        this.$refs[formName].resetFields();
       },
 
-      test: function () {
-        console.log("The msg is " + this.username + "," + this.password);
+      onClickLeft() {
+        this.$router.push({
+          path: "/"
+        });
       },
-      login: function () {
-        if (this.username === "" || this.password === "") {
-          this.notnull = true;
-        } else {
-          console.log("the msg is ", this.username, this.password, this.checked?1:0)
-          this.$http
-            .post(
-              "/register",
-              {
-                username: this.username,
-                password: this.password,
-                role: this.checked ? 1 : 0
-              },
-              {
-                emulateJSON: true,
+      register: function () {
 
-              }
-            )
-            .then(res => {
-              if (res.data.code === "1") {
-                window.localStorage.setItem(
-                  "user",
-                  JSON.stringify(res.data.token)
-                );
-                this.$router.push({
-                  path: "/index"
-                });
-              } else {
-                this.msg = true;
-                console.log("this is fail", res);
-              }
-            })
-            .catch(err => {
-              this.$notify({
-                title: "注册失败",
-                message: "服务器请求失败，请检查网络或联系管理员",
-                type: "error"
+
+        this.$http
+          .post(
+            "/register",
+            {
+              username: this.ruleForm2.username,
+              password: this.ruleForm2.pass,
+              role: this.value7
+            },
+            {
+              emulateJSON: true,
+            }
+          )
+          .then(res => {
+            if (res.data.code === "1") {
+              console.log("Regis msg is ",res.data);
+              // window.localStorage.setItem(
+              //   "user",
+              //   JSON.stringify(res.data.msg)
+              // );
+              // window.localStorage.setItem(
+              //   "token", JSON.stringify(res.data.token)
+              // );
+              this.$router.push({
+                path: "/"
               });
-              console.log(err);
+            } else {
+              this.msg = true;
+              console.log("this is fail", res);
+            }
+          })
+          .catch(err => {
+            this.$notify({
+              title: "注册失败",
+              message: "服务器请求失败，请检查网络或联系管理员",
+              type: "error"
             });
-        }
+            console.log(err);
+          });
       }
-
     }
+
+
   }
 </script>
 
@@ -125,7 +239,6 @@
   }
 
   .content {
-    margin: 5%;
     /*margin-top: 40%;*/
   }
 </style>

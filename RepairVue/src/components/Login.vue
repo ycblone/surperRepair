@@ -11,19 +11,25 @@
                 placeholder="请输入用户名">
       </el-input>
       <el-input class="input-group" type="password" v-model="password" v-on:focus="errmiss"
-                placeholder="请输入密码">
+                placeholder="请输入密码" style="margin-top: 8px">
       </el-input>
       <div v-show="notnull">用户名或密码不能为空</div>
-      <el-button type="primary" class="input-group btn-login" @click="login" :loading="loading">登录</el-button>
-      没有账号？
-      <router-link to="register">注册</router-link>
+      <el-button type="primary" class="input-group btn-login" @click="login" :loading="loading"
+                 style="margin-top: 8px">登录
+      </el-button>
+      <!--<el-button type="primary" class="input-group btn-login" @click="getregid" :loading="loading">test</el-button>-->
+      <p style="margin-top: 15px">没有账号？
+        <router-link to="register">注册</router-link>
 
+      </p>
     </div>
 
   </div>
 </template>
 
 <script>
+  import store from "../vuex/store.js";
+
   export default {
     name: "login",
     data() {
@@ -37,7 +43,27 @@
         classId: ""
       };
     },
-
+    computed: {
+      user() {
+        return JSON.parse(window.localStorage.getItem("user") || "[]");
+      },
+      token() {
+        return JSON.parse(window.localStorage.getItem("token") || "[]");
+      }
+    },
+    created() {
+      if (this.token) {
+        if (this.user.role === 1) {
+          this.$router.push({
+            path: "/index"
+          });
+        } else if (this.user.role === 2) {
+          this.$router.push({
+            path: "/company"
+          });
+        }
+      }
+    },
     methods: {
       errmiss: function () {
         if (this.msg === true || this.notnull === true) {
@@ -59,17 +85,28 @@
               {emulateJSON: true}
             )
             .then(res => {
+              console.log("the res is ", res.data);
               if (res.data.code === "1") {
                 window.localStorage.setItem(
                   "user",
-                  JSON.stringify(res.data.token)
+                  JSON.stringify(res.data.user)
                 );
+                window.localStorage.setItem(
+                  "token", JSON.stringify(res.data.token)
+                );
+                if (res.data.user.role === 1) {
+                  this.$router.push({
+                    path: "/index"
+                  });
+                } else if (res.data.user.role === 2) {
+                  this.$router.push({
+                    path: "/company"
+                  });
+                }
 
-                this.$router.push({
-                  path: "/index"
-                });
+
               } else {
-                console.log("Login fail ",res);
+                console.log("Login fail ", res);
                 this.msg = true;
               }
             })
@@ -82,6 +119,20 @@
               console.log(err);
             });
         }
+      },
+      getregid() {
+        window.plugins.jPushPlugin.receiveNotificationInAndroidCallback = function (
+          data
+        ) {
+          try {
+            console.log(
+              "JPushPlugin:receiveNotificationInAndroidCallback:",
+              data
+            );
+          } catch (exception) {
+            console.log("JPushPlugin:pushCallback ", exception);
+          }
+        };
       }
 
     }
