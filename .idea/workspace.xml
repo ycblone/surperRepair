@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":memo: 编写文档&#10;&#10;- 添加readme">
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/ComplaintM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/Inspection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/MaintenanceUnit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/ProjectMan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/RepairS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/StatisticalC.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/notification.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/repair.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/add.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/projectManage/add.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/projectManage/index.vue" afterDir="false" />
+    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":memo: 编写文档&#10;&#10;- 添加readme&#10;物业端设备管理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -121,7 +103,7 @@
           <entry key="js" value="7" />
           <entry key="json" value="1" />
           <entry key="png" value="10" />
-          <entry key="vue" value="19" />
+          <entry key="vue" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -129,30 +111,44 @@
           <entry key="Image" value="10" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="7" />
-          <entry key="Vue.js" value="19" />
+          <entry key="Vue.js" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.create.new" value="1" />
+          <entry key="git.branch.checkout.local" value="1" />
+          <entry key="git.branch.compare" value="1" />
+          <entry key="git.branch.create.new" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="77" />
+          <entry key="txt" value="17" />
           <entry key="vue" value="589" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="77" />
+          <entry key="PLAIN_TEXT" value="17" />
           <entry key="Vue.js" value="589" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="225" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -166,7 +162,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="ss" />
       </map>
     </option>
   </component>
@@ -575,6 +571,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.android" />
+        <item itemvalue="npm.android" />
       </list>
     </recent_temporary>
   </component>
@@ -604,7 +601,7 @@
       <workItem from="1543394980130" duration="6068000" />
       <workItem from="1543452996082" duration="19849000" />
       <workItem from="1543797849475" duration="26824000" />
-      <workItem from="1543897002156" duration="4149000" />
+      <workItem from="1543897002156" duration="7619000" />
     </task>
     <task id="LOCAL-00001" summary=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
       <created>1542702759021</created>
@@ -655,11 +652,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542704903085</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=":memo: 编写文档&#10;&#10;- 添加readme&#10;物业端设备管理">
+      <created>1543925756024</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543925756024</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102426000" />
+    <option name="totallyTimeSpent" value="105896000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,7 +677,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17297699" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19896065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -737,7 +741,8 @@
     <MESSAGE value=":green_heart: 修复 CI 构建&#10;&#10;- 修复版本 提到8.10.0" />
     <MESSAGE value=":bug: 修复 BUG&#10;&#10;- 删除路由中无用引用" />
     <MESSAGE value=":memo: 编写文档&#10;&#10;- 添加readme" />
-    <option name="LAST_COMMIT_MESSAGE" value=":memo: 编写文档&#10;&#10;- 添加readme" />
+    <MESSAGE value=":memo: 编写文档&#10;&#10;- 添加readme&#10;物业端设备管理" />
+    <option name="LAST_COMMIT_MESSAGE" value=":memo: 编写文档&#10;&#10;- 添加readme&#10;物业端设备管理" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RepairVue/index.html">
@@ -946,13 +951,6 @@
     <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/Index.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -969,6 +967,13 @@
             <element signature="n#style#0;n#img#0;n#van-col#1;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#van-col#2;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
