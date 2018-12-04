@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":memo: 编写文档&#10;&#10;- 添加readme">
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/ComplaintM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/Inspection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/MaintenanceUnit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/ProjectMan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/RepairS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/StatisticalC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/assets/image/repair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/add.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/projectManage/add.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RepairVue/src/components/property/projectManage/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/components/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepairVue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,9 +105,54 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1555983444">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="7" />
+          <entry key="json" value="1" />
+          <entry key="png" value="10" />
+          <entry key="vue" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="10" />
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="7" />
+          <entry key="Vue.js" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="77" />
+          <entry key="vue" value="589" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="77" />
+          <entry key="Vue.js" value="589" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="225" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,6 +164,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -121,10 +186,16 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/RepairVue/package.json" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/RepairVue/src/components/Index.vue" />
-        <option value="$PROJECT_DIR$/RepairVue/src/router/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/property.vue" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/property/main.vue" />
+        <option value="$PROJECT_DIR$/RepairVue/src/router/index.js" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/property/projectManage/add.vue" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/property/projectManage/index.vue" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/index.vue" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/Index.vue" />
+        <option value="$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/add.vue" />
       </list>
     </option>
   </component>
@@ -149,8 +220,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="468" />
-    <option name="y" value="60" />
+    <option name="x" value="102" />
+    <option name="y" value="21" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -162,18 +233,60 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="Repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Repair" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Repair" type="462c0819:PsiDirectoryNode" />
+              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Repair" type="462c0819:PsiDirectoryNode" />
+              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Repair" type="462c0819:PsiDirectoryNode" />
+              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Repair" type="462c0819:PsiDirectoryNode" />
+              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="property" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Repair" type="462c0819:PsiDirectoryNode" />
+              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="property" type="462c0819:PsiDirectoryNode" />
+              <item name="deviceManage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Repair" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Repair" type="462c0819:PsiDirectoryNode" />
+              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,8 +296,19 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.VCS" />
     <property name="ts.external.directory.path" value="D:\App\apps\WebStorm\ch-0\182.4892.25\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workpace\Repair\RepairVue\src\components\property" />
+      <recent name="D:\workpace\Repair\RepairVue\src\assets\image" />
+      <recent name="D:\workpace\Repair\RepairVue\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workpace\Repair\RepairVue\src\assets" />
+      <recent name="D:\workpace\Repair\res\icon\image" />
+    </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -426,7 +550,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.android">
+  <component name="RunManager" selected="npm.启动vue">
     <configuration name="android" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/RepairVue/package.json" />
       <command value="run" />
@@ -477,6 +601,10 @@
       <workItem from="1542702530376" duration="3787000" />
       <workItem from="1542718543659" duration="1189000" />
       <workItem from="1542766419741" duration="25000" />
+      <workItem from="1543394980130" duration="6068000" />
+      <workItem from="1543452996082" duration="19849000" />
+      <workItem from="1543797849475" duration="26824000" />
+      <workItem from="1543897002156" duration="4149000" />
     </task>
     <task id="LOCAL-00001" summary=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
       <created>1542702759021</created>
@@ -531,7 +659,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45536000" />
+    <option name="totallyTimeSpent" value="102426000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -545,22 +673,22 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11309524" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17297699" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996288" visible="true" weight="0.3416252" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991454" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.36752138" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32764506" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32991454" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.46932006" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003712" side_tool="true" weight="0.39966834" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3283582" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32991454" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -569,11 +697,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="F:/SX/untitled10/node_modules/karma/config.tpl.js" />
-      </list>
-    </option>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
@@ -627,37 +750,14 @@
     <entry file="file://$PROJECT_DIR$/RepairVue/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/node_modules/vue-router/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vant/lib/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/vant/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/node_modules/axios/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/node_modules/vue-router/types/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/vant/lib/index.css" />
+    <entry file="file://$PROJECT_DIR$/node_modules/vant/types/index.d.ts" />
+    <entry file="file://$PROJECT_DIR$/RepairVue/node_modules/axios/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/RepairVue/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/config/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -698,13 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -719,45 +812,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Register.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="8" selection-start-line="1" selection-start-column="2" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="65" selection-start-column="65" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -779,6 +837,138 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property.vue" />
+    <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/main.vue" />
+    <entry file="file://$PROJECT_DIR$/res/icon/blackberry/icon-80.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/img/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icon/android/icon-96-xhdpi.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icon/android/icon-72-hdpi.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icon/android/icon-48-mdpi.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icon/bada-wac/icon-48-type5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icon/android/icon-36-ldpi.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/icon/image/icon-36-ldpi.png" />
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/assets/image/ProjectMan.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/config/prod.env.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-512">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/config/dev.env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="87" column="22" lean-forward="true" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/projectManage/add.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/projectManage/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/add.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/Index.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/deviceManage/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#van-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#0;n#van-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#1;n#van-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#0;n#van-row#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#1;n#van-row#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#2;n#van-row#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#0;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#1;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#van-col#2;n#van-row#2;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
