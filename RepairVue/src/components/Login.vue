@@ -54,11 +54,11 @@
     created() {
       if (this.token) {
         if (this.user.role === 1) {
-          this.$router.push({
+          this.$router.replace({
             path: "/index"
           });
         } else if (this.user.role === 2) {
-          this.$router.push({
+          this.$router.replace({
             path: "/company"
           });
         }
@@ -95,11 +95,11 @@
                   "token", JSON.stringify(res.data.token)
                 );
                 if (res.data.user.role === 1) {
-                  this.$router.push({
+                  this.$router.replace({
                     path: "/index"
                   });
                 } else if (res.data.user.role === 2) {
-                  this.$router.push({
+                  this.$router.replace({
                     path: "/company"
                   });
                 }
