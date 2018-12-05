@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":memo: 编写文档&#10;          &#10;          - 添加readme">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepairVue/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/RepairVue/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/static/js/manifest.3ad1d5771e9b13dbdad2.js.map" afterDir="false" />
-    </list>
+    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":wrench: 修改配置文件&#10;&#10;-- 修改登录跳转相关问题&#10;-- 补充gitignore" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -51,7 +43,7 @@
           <entry key="js" value="208" />
           <entry key="json" value="73" />
           <entry key="md" value="220" />
-          <entry key="txt" value="195" />
+          <entry key="txt" value="235" />
           <entry key="vue" value="2022" />
           <entry key="yml" value="61" />
         </counts>
@@ -62,7 +54,7 @@
           <entry key="HTTP Request" value="70" />
           <entry key="JSON" value="73" />
           <entry key="JavaScript" value="208" />
-          <entry key="PLAIN_TEXT" value="415" />
+          <entry key="PLAIN_TEXT" value="455" />
           <entry key="Vue.js" value="2022" />
           <entry key="YAML" value="61" />
         </counts>
@@ -79,7 +71,7 @@
           <entry key="png" value="3" />
           <entry key="ts" value="3" />
           <entry key="vue" value="45" />
-          <entry key="xml" value="5" />
+          <entry key="xml" value="6" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
@@ -95,7 +87,7 @@
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="TypeScript" value="3" />
           <entry key="Vue.js" value="45" />
-          <entry key="XML" value="5" />
+          <entry key="XML" value="6" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
@@ -123,11 +115,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
+            <state relative-caret-position="114">
               <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -725,7 +726,7 @@
       <workItem from="1543826113955" duration="10204000" />
       <workItem from="1543913222572" duration="2344000" />
       <workItem from="1543928748629" duration="1214000" />
-      <workItem from="1543973401911" duration="5790000" />
+      <workItem from="1543973401911" duration="6033000" />
     </task>
     <task id="LOCAL-00001" summary=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
       <created>1542702759021</created>
@@ -790,11 +791,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543934426816</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary=":wrench: 修改配置文件&#10;&#10;-- 修改登录跳转相关问题&#10;-- 补充gitignore">
+      <created>1543979828556</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543979828556</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110829000" />
+    <option name="totallyTimeSpent" value="111072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,7 +814,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20535715" />
@@ -881,7 +889,8 @@
     <MESSAGE value=":memo: 编写文档&#10;&#10;- 更新readme，添加安装，编译依赖等说明" />
     <MESSAGE value=":sparkles: 添加新特性&#10;&#10;- 添加企业模块&#10;- 修改了登录注册逻辑" />
     <MESSAGE value=":memo: 编写文档&#10;          &#10;          - 添加readme" />
-    <option name="LAST_COMMIT_MESSAGE" value=":memo: 编写文档&#10;          &#10;          - 添加readme" />
+    <MESSAGE value=":wrench: 修改配置文件&#10;&#10;-- 修改登录跳转相关问题&#10;-- 补充gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=":wrench: 修改配置文件&#10;&#10;-- 修改登录跳转相关问题&#10;-- 补充gitignore" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RepairVue/README.md">
@@ -1103,13 +1112,6 @@
     <entry file="file://$PROJECT_DIR$/RepairVue/build/build.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="1" column="92" selection-start-line="1" selection-start-column="92" selection-end-line="1" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RepairVue/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1126,8 +1128,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RepairVue/src/components/Login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="114">
           <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
         </state>
       </provider>
     </entry>
