@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":wrench: 修改配置文件&#10;&#10;-- 修改登录跳转相关问题&#10;-- 补充gitignore" />
+    <list default="true" id="a1324bf4-d7b9-413a-8c88-040815978183" name="Default" comment=":wrench: 修改.gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -43,7 +45,7 @@
           <entry key="js" value="208" />
           <entry key="json" value="73" />
           <entry key="md" value="220" />
-          <entry key="txt" value="235" />
+          <entry key="txt" value="236" />
           <entry key="vue" value="2022" />
           <entry key="yml" value="61" />
         </counts>
@@ -54,14 +56,14 @@
           <entry key="HTTP Request" value="70" />
           <entry key="JSON" value="73" />
           <entry key="JavaScript" value="208" />
-          <entry key="PLAIN_TEXT" value="455" />
+          <entry key="PLAIN_TEXT" value="456" />
           <entry key="Vue.js" value="2022" />
           <entry key="YAML" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="5" />
+          <entry key="gitignore" value="7" />
           <entry key="html" value="2" />
           <entry key="http" value="2" />
           <entry key="js" value="25" />
@@ -77,7 +79,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Git file" value="5" />
+          <entry key="Git file" value="7" />
           <entry key="HTML" value="2" />
           <entry key="HTTP Request" value="2" />
           <entry key="Image" value="3" />
@@ -124,11 +126,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
+            <state relative-caret-position="380">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="538">
+              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -169,9 +180,9 @@
         <option value="$PROJECT_DIR$/RepairVue/src/router/index.js" />
         <option value="$PROJECT_DIR$/RepairVue/src/components/Test.vue" />
         <option value="$PROJECT_DIR$/RepairVue/src/components/Company.vue" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/RepairVue/src/components/Login.vue" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -221,30 +232,6 @@
             <path>
               <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
-              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
-              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
-              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordovaApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordovaApp" type="462c0819:PsiDirectoryNode" />
-              <item name="RepairVue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -726,7 +713,7 @@
       <workItem from="1543826113955" duration="10204000" />
       <workItem from="1543913222572" duration="2344000" />
       <workItem from="1543928748629" duration="1214000" />
-      <workItem from="1543973401911" duration="6033000" />
+      <workItem from="1543973401911" duration="6618000" />
     </task>
     <task id="LOCAL-00001" summary=":ambulance: 核心代码修复&#10;&#10;- 删除不必要的文件">
       <created>1542702759021</created>
@@ -798,11 +785,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543979828556</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary=":wrench: 修改.gitignore">
+      <created>1543980192280</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1543980192280</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111072000" />
+    <option name="totallyTimeSpent" value="111657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -814,8 +808,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20535715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -830,7 +823,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991454" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.36752138" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.36752138" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32764506" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.44273505" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32991454" />
@@ -890,7 +883,8 @@
     <MESSAGE value=":sparkles: 添加新特性&#10;&#10;- 添加企业模块&#10;- 修改了登录注册逻辑" />
     <MESSAGE value=":memo: 编写文档&#10;          &#10;          - 添加readme" />
     <MESSAGE value=":wrench: 修改配置文件&#10;&#10;-- 修改登录跳转相关问题&#10;-- 补充gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value=":wrench: 修改配置文件&#10;&#10;-- 修改登录跳转相关问题&#10;-- 补充gitignore" />
+    <MESSAGE value=":wrench: 修改.gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=":wrench: 修改.gitignore" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RepairVue/README.md">
@@ -1047,16 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RepairVue/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="62" column="19" lean-forward="true" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RepairVue/src/components/property/projectManage/index.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1135,8 +1119,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="81" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
+        <state relative-caret-position="380">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RepairVue/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
         </state>
       </provider>
     </entry>
