@@ -4,7 +4,13 @@ import Router from 'vue-router'
 import Register from '@/components/Register'
 import Index from '@/components/Index'
 import Login from "@/components/Login";
+
 import Add from "@/components/property/deviceManage/add";
+
+import Company from "@/components/Company";
+import Test from "@/components/Test";
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -15,19 +21,30 @@ export default new Router({
       component: Login
     },
     {
-      path:'/register',
-      name:'register',
-      component:Register
+      path: '/test',
+      name: 'test',
+      component: Test
     },
-    {
-      path:'/index',
-      name:'index',
-      component:Index
-    },
+
     {
       path:'/equipment/add',
       name:'add',
       component:Add
+},{
+      path: '/register',
+      name: 'register',
+      component: Register
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: Index
+    },
+    {
+      path: '/company',
+      name: 'company',
+      component: Company
+
     }
   ]
 })
