@@ -14,7 +14,6 @@ import axios from 'axios';
 import Vuex from 'vuex'
 import {Lazyload,RadioGroup, Radio,Dialog,Cell, CellGroup,Uploader,Toast } from 'vant';
 Vue.use(RadioGroup).use(Radio).use(Uploader).use(Cell).use(CellGroup).use(Dialog).use(Toast);
-
 Vue.use(Lazyload);
 Vue.use(Vuex);
 // Vue.config.productionTip = false;
