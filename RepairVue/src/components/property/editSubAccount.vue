@@ -1,28 +1,49 @@
 <template>
   <div class="content">
-
-    <!--equipmentAdd-->
     <div style="margin-top:30px;padding:10px ;">
-
       <div class="title">
-        <h2>编辑物业子账号</h2>
+        <h2>设置子账号状态</h2>
       </div>
-      用户账号：<el-input v-model="this.data.username" v-on:focus="errmiss">
-      </el-input>
-      用户名称：<el-input v-model="this.data.name" v-on:focus="errmiss">
-      </el-input>
-      相关描述：<el-input v-model="this.data.miaoshu" v-on:focus="errmiss">
-      </el-input>
-      是否能够使用：<el-input  v-model="this.data.isEnable" v-on:focus="errmiss">
-      </el-input>
-      添加时间：<el-input  v-model="this.data.addTime" v-on:focus="errmiss">
-      </el-input>
-      禁用时间<el-input  v-model="this.data.forbiddenTime" v-on:focus="errmiss">
-      </el-input>
-      物业名称：<el-input  v-model="this.data.wy.name" v-on:focus="errmiss">
-      </el-input>
-      <el-button type="primary" class="input-group btn-login" @click="Edit(data.id)" :loading="loading">提交编辑信息</el-button>
-      <el-button type="primary" class="input-group btn-login" @click="del(data.id)" :loading="loading">删除子账号</el-button>
+      <el-form ref="form" label-width="80px">
+        <el-form-item label="用户名">
+          <el-input v-model="username" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="名称">
+          <el-input v-model="name" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="描述">
+          <el-input v-model="miaoshu" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="是否正常">
+          <el-input  v-model="isEnable" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="联系电话">
+          <el-input  v-model="phone" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="邮箱">
+          <el-input  v-model="email" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="省份">
+          <el-input  v-model="province" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="城市">
+          <el-input  v-model="city" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="头像">
+          <el-input  v-model="headPic" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="添加时间">
+          <el-input  v-model="addTime" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="禁止时间">
+          <el-input  v-model="forbiddenTime" disabled="disabled"/>
+        </el-form-item>
+        <el-form-item label="物业">
+          <el-input  v-model="wy" disabled="disabled"/>
+        </el-form-item>
+      </el-form>
+      <el-button type="primary" class="input-group btn-login" @click="Edit(data.id)">提交编辑信息</el-button>
+      <el-button type="primary" class="input-group btn-login" @click="del(data.id)">删除子账号</el-button>
     </div>
   </div>
 </template>
@@ -40,25 +61,16 @@
         forbiddenTime: '',
         wy: '',
         message: "编辑物业子账号信息数据",
-        loading: false,
         msg: false,
         notnull: false
       };
     },
 
     methods: {
-      errmiss: function () {
-        if (this.msg === true || this.notnull === true) {
-          this.msg = false;
-          this.notnull = false;
-        }
-      },
-
       Edit: function () {
         if (this.text === "") {
           this.notnull = true;
         } else {
-          console.log("the msg is ", this.username)
           this.$http
             .post(
               "/notice/addNotice",
@@ -109,12 +121,6 @@
 </script>
 
 <style scoped>
-
-  .mx {
-    background-color: blue;
-    color: #6c6c6c;
-  }
-
   .btn-login {
     width: 100%;
   }
@@ -129,6 +135,5 @@
 
   .content {
     margin: 5%;
-    /*margin-top: 40%;*/
   }
 </style>

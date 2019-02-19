@@ -28,11 +28,13 @@
                 <div>一键报修</div>
               </van-col>
             </router-link>
-            <van-col span="8">
-              <img src="../assets/property/image/Inspection.png" style="width: 70px ;height :70px"/>
-              <!--<van-icon name="success" size="40px"/>-->
-              <div>巡检提醒</div>
-            </van-col>
+            <router-link to="/PatrolReminder/index">
+              <van-col span="8">
+                <img src="../assets/property/image/Inspection.png" style="width: 70px ;height :70px"/>
+                <!--<van-icon name="success" size="40px"/>-->
+                <div>巡检提醒</div>
+              </van-col>
+            </router-link>
           </van-row>
           <van-row style="margin-top: 30px">
             <router-link to="/equipment/index">
@@ -56,10 +58,12 @@
             </router-link>
           </van-row>
           <van-row style="margin-top: 30px">
-            <van-col span="8">
-              <img src="../assets/property/image/StatisticalC.png" style="width: 70px ;height :70px"/>
-              <div>统计中心</div>
-            </van-col>
+            <router-link to="/countCenter/count">
+              <van-col span="8">
+                <img src="../assets/property/image/StatisticalC.png" style="width: 70px ;height :70px"/>
+                <div>统计中心</div>
+              </van-col>
+            </router-link>
             <router-link to="/announce/index">
               <van-col span="8">
                 <img src="../assets/property/image/notification.png" style="width: 70px ;height :70px"/>

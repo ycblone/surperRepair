@@ -6,34 +6,6 @@
         <el-table
           :data="data.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))"
           style="width: 100%">
-          <el-table-column type="expand">
-            <template slot-scope="props">
-              <el-form label-position="left" inline class="demo-table-expand">
-                <el-form-item label="维保单位">
-                  <span>{{ props.row.wbqy.id}}</span>
-                </el-form-item>
-                <el-form-item label="合同内容">
-                  <span>{{ props.row.content}}</span>
-                </el-form-item>
-                <el-form-item label="开始时间">
-                  <span>{{ props.row.startDate }}</span>
-                </el-form-item>
-                <el-form-item label="结束时间">
-                  <span>{{ props.row.endDate }}</span>
-                </el-form-item>
-                <el-form-item label="负责人">
-                  <span>{{ props.row.fuzeren }}</span>
-                </el-form-item>
-                <el-form-item label="付款方式">
-                  <span>{{ props.row.fukuanfangshi }}</span>
-                </el-form-item>
-                <el-form-item label="付款时间">
-                  <span>{{ props.row.fukuanshijian}}</span>
-                </el-form-item>
-              </el-form>
-            </template>
-          </el-table-column>
-
           <el-table-column
             label="序号"
             width="90"
@@ -54,13 +26,12 @@
                 placeholder="关键字搜索"/>
             </template>
             <template slot-scope="scope">
-              <el-button
-                size="mini"
-                @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
-              <el-button
-                size="mini"
-                type="danger"
-                @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+              <router-link :to="{ name: 'contractEdit', params: { contractId: scope.row.id }}">
+                <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">编&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp辑</el-button>
+              </router-link>
+              <router-link :to="{ name: 'contractSelect', params: { contractId: scope.row.id }}">
+                <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">合同详情</el-button>
+              </router-link>
             </template>
           </el-table-column>
         </el-table>
@@ -71,28 +42,21 @@
           <div class="title">
             <h2>添加合同</h2>
           </div>
-          <el-input class="input-group" v-model="wbqy" v-on:focus="errmiss"
-                    placeholder="维保企业">
+          <el-input class="input-group" v-model="wbqy" placeholder="维保企业">
           </el-input>
-          <el-input class="input-group" v-model="content" v-on:focus="errmiss"
-                    placeholder="合同内容">
+          <el-input class="input-group" v-model="content" placeholder="合同内容">
           </el-input>
-          <el-input class="input-group" type="date" v-model="startDate" v-on:focus="errmiss"
-                    placeholder="开始日期">
+          <el-input class="input-group" type="date" v-model="startDate" placeholder="开始日期">
           </el-input>
-          <el-input class="input-group" type="date" v-model="endDate" v-on:focus="errmiss"
-                    placeholder="结束日期">
+          <el-input class="input-group" type="date" v-model="endDate" placeholder="结束日期">
           </el-input>
-          <el-input class="input-group" v-model="fuzeren" v-on:focus="errmiss"
-                    placeholder="负责人">
+          <el-input class="input-group" v-model="fuzeren" placeholder="负责人">
           </el-input>
-          <el-input class="input-group" v-model="fukuanfangshi" v-on:focus="errmiss"
-                    placeholder="付款方式">
+          <el-input class="input-group" v-model="fukuanfangshi" placeholder="付款方式">
           </el-input>
-          <el-input class="input-group" type="date" v-model="fukuanshijian" v-on:focus="errmiss"
-                    placeholder="付款时间">
+          <el-input class="input-group" type="date" v-model="fukuanshijian" placeholder="付款时间">
           </el-input>
-          <el-button type="primary" class="input-group btn-login" @click="add" :loading="loading">提交</el-button>
+          <el-button type="primary" class="input-group btn-login" @click="add">提交</el-button>
         </div>
       </el-tab-pane>
     </el-tabs>
@@ -102,9 +66,6 @@
   .el-tabs--border-card>.el-tabs__content{
     padding: 0px;
   }
-  .demo-table-expand {
-    font-size: 0;
-  }
   .demo-table-expand label {
     width: 90px;
     color: #99a9bf;
@@ -113,10 +74,6 @@
     margin-right: 0;
     margin-bottom: 0;
     width: 50%;
-  }
-  .mx {
-    background-color: blue;
-    color: #6c6c6c;
   }
   .btn-login {
     width: 100%;
@@ -144,7 +101,6 @@
         fukuanfangshi: '',
         fukuanshijian: '',
         message: "合同信息数据",
-        loading: false,
         msg: false,
         notnull: false
       }
@@ -154,23 +110,10 @@
       this.select()
     },
     methods: {
-      handleEdit(index, row) {
-        console.log(index, row);
-      },
-      handleDelete(index, row) {
-        console.log(index, row);
-      },
-      errmiss: function () {
-        if (this.msg === true || this.notnull === true) {
-          this.msg = false;
-          this.notnull = false;
-        }
-      },
       add: function () {
         if (this.content === "" || this.fuzeren === "") {
           this.notnull = true;
         } else {
-          console.log("the msg is ", this.content, this.fuzeren)
           this.$http
             .post(
               "/user/addContract",
@@ -200,7 +143,7 @@
                   JSON.stringify(res.data.token)
                 );
                 this.$router.push({
-                  path: "/index"
+                  path: "/contractBlack"
                 });
               } else {
                 this.$router.push({
@@ -213,6 +156,46 @@
             .catch(err => {
               this.$notify({
                 title: "添加失败",
+                message: "服务器请求失败，请检查网络或联系管理员",
+                type: "error"
+              });
+              console.log(err);
+            });
+        }
+      },
+      del: function (id) {
+        if (id === "") {
+          this.notnull = true;
+        } else {
+          this.$http
+            .post(
+              "/contract/"+id,
+              {
+                headers: {
+                  'Auth-Token': JSON.parse(window.localStorage.getItem("token") || "[]").toString(),
+                  'Content-Type': 'application/json'
+                }
+              },
+              {emulateJSON: true,}
+            )
+            .then(res => {
+              if (res.data.code === "1") {
+                window.localStorage.setItem(
+                  "announce",
+                  JSON.stringify(res.data.token)
+                );
+                this.$router.replace("/contractBlack")
+              }else {
+                this.$router.push({
+                  path: "/"
+                });
+                this.msg = true;
+                console.log("this is fail", res);
+              }
+            })
+            .catch(err => {
+              this.$notify({
+                title: "删除失败",
                 message: "服务器请求失败，请检查网络或联系管理员",
                 type: "error"
               });
@@ -241,8 +224,7 @@
                 "contract",
                 JSON.stringify(res.data.token)
               );
-              this.data = res.data.data,
-              console.log("this.msg："+res.data.msg)
+              this.data = res.data.data;
             } else {
               this.$router.push({
                 path: "/"

@@ -1,36 +1,34 @@
 <template>
   <div class="content">
-
     <!--repairMain-->
     <div style="margin-top:30px;padding:10px ;">
-
       <div class="title">
         <h2>维修工单详情</h2>
       </div>
       <el-form ref="form" label-width="80px">
         <el-form-item label="设备名称">
-          <el-input v-model="name" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input v-model="name" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备地址">
-          <el-input  v-model="address" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="address" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="报修时间">
-          <el-input v-model="startTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input v-model="startTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="派出时间">
-          <el-input v-model="paichuTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input v-model="paichuTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="到达时间">
-          <el-input  v-model="arrivalTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="arrivalTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="结束时间">
-          <el-input  v-model="endTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="endTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="反馈内容">
-          <el-input  v-model="fankui" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="fankui" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备状态">
-          <el-input  v-model="state" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="state" disabled="disabled"/>
         </el-form-item>
       </el-form>
     </div>
@@ -54,7 +52,6 @@
         state:'',
         repairId:'',
         message: "维修工单数据",
-        loading: false,
         msg: false,
         notnull: false
       };
@@ -63,15 +60,8 @@
       this.select();
     },
     methods: {
-      errmiss: function () {
-        if (this.msg === true || this.notnull === true) {
-          this.msg = false;
-          this.notnull = false;
-        }
-      },
       select: function () {
         this.repairId = this.$route.params.repairId;
-        console.log("this is 12131231231", this.repairId);
         this.$http
           .post(
             "/actionLog/findById/",
@@ -125,26 +115,11 @@
 </script>
 
 <style scoped>
-
-  .mx {
-    background-color: blue;
-    color: #6c6c6c;
-  }
-
-  .btn-login {
-    width: 100%;
-  }
-
   .title {
     text-align: center;
   }
 
-  .input-group {
-    margin-top: 2%;
-  }
-
   .content {
     margin: 5%;
-    /*margin-top: 40%;*/
   }
 </style>

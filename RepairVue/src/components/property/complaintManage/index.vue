@@ -81,8 +81,7 @@
                 "actionLog",
                 JSON.stringify(res.data.token)
               );
-              this.data = res.data.data,
-              console.log("this.msg："+res.data.msg);
+              this.data = res.data.data;
             } else {
               this.$router.push({
                 path: "/"

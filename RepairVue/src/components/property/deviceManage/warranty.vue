@@ -127,8 +127,7 @@
                 "actionLog",
                 JSON.stringify(res.data.token)
               );
-              this.data2 = res.data.data,
-                console.log("this.msg："+res.data.msg);
+              this.data2 = res.data.data;
             } else {
               this.$router.push({
                 path: "/"
@@ -167,9 +166,8 @@
                 "equipment",
                 JSON.stringify(res.data.token)
               );
-              this.data1 = res.data.data,
+              this.data1 = res.data.data;
                 console.log("内容："+res.data.data[1].id)
-              console.log("this.msg："+res.data.msg)
             } else {
               this.$router.push({
                 path: "/"

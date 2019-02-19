@@ -26,13 +26,10 @@
               placeholder="关键字搜索"/>
           </template>
           <template slot-scope="scope">
-            <el-button
-              size="mini"
-              @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-            <el-button
-              size="mini"
-              type="danger"
-              @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+            <router-link :to="{ name: 'demandEdit', params: { demandId: scope.row.id }}">
+              <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">编辑</el-button>
+            </router-link>
+            <el-button type="primary" size="mini" icon="el-icon-delete" class="input-group" @click="del(scope.row.id)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -59,6 +56,37 @@
           <el-button type="primary" class="input-group btn-login" @click="add()">发布需求</el-button>
         </el-form>
       </el-tab-pane>
+      <el-tab-pane label="报价记录管理" class="el-tab-pane">
+        <el-table
+          ref="filterTable"
+          :data="data1.filter(data1 => !search || data1.requirement.toLowerCase().includes(search.toLowerCase()))"
+          style="width: 100%">
+          <el-table-column
+            prop="requirement.title"
+            label="竞价的项目"
+            width="100">
+          </el-table-column>
+          <el-table-column
+            prop="wbqy.username"
+            label="	报价的维保企业"
+            width="100">
+          </el-table-column>
+          <el-table-column
+            align="right">
+            <template slot="header" slot-scope="scope">
+              <el-input
+                v-model="search"
+                size="mini"
+                placeholder="关键字搜索"/>
+            </template>
+            <template slot-scope="scope">
+              <router-link :to="{ name: 'quoteSelect', params: { quoteId: scope.row.id }}">
+                <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">报价详情</el-button>
+              </router-link>
+            </template>
+          </el-table-column>
+        </el-table>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -68,6 +96,7 @@
     data() {
       return {
         data:[],
+        data1:[],
         title:'',
         pic:'',
         content:'',
@@ -77,15 +106,10 @@
       }
     },
     created(){
-      this.select()
+      this.select();
+      this.select1();
     },
     methods: {
-      handleEdit(index, row) {
-        console.log(index, row);
-      },
-      handleDelete(index, row) {
-        console.log(index, row);
-      },
       add: function () {
         if (this.title === "") {
           this.notnull = true;
@@ -95,6 +119,7 @@
             .post(
               "/auction/wyPublishRequirement",
               {
+
                 title: this.title,
                 content: this.content,
                 area:this.area
@@ -116,7 +141,7 @@
                   JSON.stringify(res.data.token)
                 );
                 this.$router.push({
-                  path: "/index"
+                  path: "/demandBlack"
                 });
               } else {
                 this.$router.push({
@@ -135,6 +160,45 @@
               console.log(err);
             });
         }
+      },
+      select1: function () {
+        this.$http
+          .post(
+            "/auction/wyViewAuction",
+            {},
+            {
+              headers: {
+                'Auth-Token': JSON.parse(window.localStorage.getItem("token") || "[]").toString(),
+                'Content-Type': 'application/json'
+              }
+            },
+            {
+              emulateJSON: true,
+            }
+          )
+          .then(res => {
+            if (res.data.code === "1") {
+              window.localStorage.setItem(
+                "quote",
+                JSON.stringify(res.data.token)
+              );
+              this.data1 = res.data.data;
+            } else {
+              this.$router.push({
+                path: "/"
+              });
+              this.msg = true;
+              console.log("this is fail", res);
+            }
+          })
+          .catch(err => {
+            this.$notify({
+              title: "访问失败",
+              message: "服务器请求失败，请检查网络或联系管理员",
+              type: "error"
+            });
+            console.log(err);
+          });
       },
       select: function () {
         this.$http
@@ -157,8 +221,7 @@
                 "demand",
                 JSON.stringify(res.data.token)
               );
-              this.data = res.data.data,
-              console.log("this.msg："+res.data.msg);
+              this.data = res.data.data;
             } else {
               this.$router.push({
                 path: "/"

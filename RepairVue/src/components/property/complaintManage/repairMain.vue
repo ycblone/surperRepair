@@ -9,34 +9,34 @@
       </div>
       <el-form ref="form" label-width="80px">
         <el-form-item label="设备名称">
-          <el-input v-model="this.data.equipment.name" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input v-model="equipment" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备地址">
-          <el-input  v-model="this.data.equipment.address" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="address" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="报修时间">
-          <el-input v-model="this.data.startTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input v-model="startTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="派出时间">
-          <el-input v-model="this.data.paichuTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input v-model="paichuTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="到达时间">
-          <el-input  v-model="this.data.arrivalTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="arrivalTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="结束时间">
-          <el-input  v-model="this.data.endTime" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="endTime" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="反馈内容">
-          <el-input  v-model="this.data.fankui" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="fankui" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备状态">
-          <el-input  v-model="this.data.state" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="state" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="投诉内容">
-          <el-input v-model="fankui" v-on:focus="errmiss"/>
+          <el-input v-model="fankui"/>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" class="input-group btn-login" @click="add(data.id)" :loading="loading">提交投诉</el-button>
+          <el-button type="primary" class="input-group btn-login" @click="add(data.id)">提交投诉</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -49,7 +49,7 @@
       return {
         data:'',
         equipment: '',
-        staerTime: '',
+        startTime: '',
         paichuTime: '',
         querenTime: '',
         arrivalTime: '',
@@ -61,7 +61,6 @@
         state:'',
         repairId:'',
         message: "维修工单数据",
-        loading: false,
         msg: false,
         notnull: false
       };
@@ -70,12 +69,6 @@
       this.select();
     },
     methods: {
-      errmiss: function () {
-        if (this.msg === true || this.notnull === true) {
-          this.msg = false;
-          this.notnull = false;
-        }
-      },
       select: function () {
         this.repairId = this.$route.params.repairId;
         this.$http
@@ -99,8 +92,15 @@
                 "repair",
                 JSON.stringify(res.data.token)
               );
-              this.data = res.data.data,
-              console.log("this.msg："+res.data.msg)
+              this.data = res.data.data;
+              this.equipment =this.data.equipment.name;
+              this.address =this.data.equipment.address;
+              this.startTime =this.data.startTime;
+              this.paichuTime =this.data.paichuTime;
+              this.arrivalTime =this.data.arrivalTime;
+              this.endTime =this.data.endTime;
+              this.fankui =this.data.fankui;
+              this.state =this.data.state;
             } else {
               this.$router.push({
                 path: "/"
@@ -122,7 +122,6 @@
         if (this.fankui === "") {
           this.notnull = true;
         } else {
-          console.log("the msg is ", this.fankui, id);
           this.$http
             .post(
               "/actionLog/fanKui",

@@ -1,42 +1,39 @@
 <template>
   <div class="content">
-
-    <!--equipmentAdd-->
     <div style="margin-top:30px;padding:10px ;">
-
       <div class="title">
         <h2>一键报修详情页面</h2>
       </div>
       <el-form ref="form" label-width="80px">
         <el-form-item label="设备编号">
-          <el-input  v-model="code" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="code" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备名称">
-          <el-input  v-model="name" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="name" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备属性">
-          <el-input  v-model="isTeZhongSheBei" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="isTeZhongSheBei" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备类型">
-          <el-input  v-model="type" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="type" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备描述">
-          <el-input  v-model="miaoshu" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="miaoshu" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="规格型号">
-          <el-input  v-model="version" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="version" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="设备地址">
-          <el-input  v-model="address" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="address" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="归属部门">
-          <el-input  v-model="bumeng" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="bumeng" disabled="disabled"/>
         </el-form-item>
         <el-form-item label="维保单位">
-          <el-input  v-model="id" v-on:focus="errmiss" disabled="disabled"/>
+          <el-input  v-model="id" disabled="disabled"/>
         </el-form-item>
         <!--<el-form-item label="报修描述">
-          <el-input  v-model="miaoshu" v-on:focus="errmiss"/>
+          <el-input  v-model="miaoshu"/>
         </el-form-item>-->
         <el-form-item>
           <el-button type="primary" size="small" class="btn-login" @click="add(data.id) ">一键报修</el-button>
@@ -62,7 +59,6 @@
         address: '',
         bumeng: '',
         message: "设备信息数据",
-        loading: false,
         msg: false,
         notnull: false
       };
@@ -71,14 +67,7 @@
       this.select();
     },
     methods: {
-      errmiss: function () {
-        if (this.msg === true || this.notnull === true) {
-          this.msg = false;
-          this.notnull = false;
-        }
-      },
       add: function (equipmentId) {
-        console.log("the msg is ", equipmentId, this.miaoshu)
         if (equipmentId === "" || this.miaoshu === "") {
           this.notnull = true;
         } else {
@@ -161,7 +150,6 @@
               this.address = this.data.address;
               this.bumeng = this.data.bumeng;
               this.id = this.data.wbqy.id;
-              console.log("this.msg："+res.data.msg)
             } else {
               this.$router.push({
                 path: "/"
@@ -185,12 +173,6 @@
 </script>
 
 <style scoped>
-
-  .mx {
-    background-color: blue;
-    color: #6c6c6c;
-  }
-
   .btn-login {
     width: 100%;
   }
@@ -198,13 +180,7 @@
   .title {
     text-align: center;
   }
-
-  .input-group {
-    margin-top: 2%;
-  }
-
   .content {
     margin: 5%;
-    /*margin-top: 40%;*/
   }
 </style>

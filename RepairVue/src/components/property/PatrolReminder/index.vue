@@ -1,82 +1,112 @@
-
 <template>
-    <div data-role="page" id="page">
-      <div data-role="content">
-        <form>
-          <div class="ui-body ui-body-b">
-            <div data-role="fieldcontain">
-              <center>
-                <h3>JPushPlugin Example</h3>
-              </center>
-              <span name="alias" id="alias"></span>
-              <hr/>
-              <label>RegistrationID: </label>
-              <label id="registrationId">null</label>
-            </div>
-            <div data-role="fieldcontain">
-              <label>Tags: </label>
-              <table>
-                <tr>
-                  <td>
-                    <input type="text" id="tagText1" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="text" id="tagText2" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="text" id="tagText3" />
-                  </td>
-                </tr>
-              </table>
-              <label>Alias: </label>
-              <table>
-                <tr>
-                  <td>
-                    <input type="text" id="aliasText" />
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div data-role="fieldcontain">
-              <input type="button" id="setTags" value="Set tags" />
-              <input type="button" id="getAllTags" value="Get all tags" />
-              <input type="button" id="cleanTags" value="Clean tags" />
-            </div>
-              
-            <div data-role="fieldcontain">
-              <input type="button" id="setAlias" value="Set alias" />
-              <input type="button" id="getAlias" value="Get alias" />
-              <input type="button" id="deleteAlias" value="Delete alias" />
-            </div>
-
-            <div data-role="fieldcontain">
-              <label id="tagsPrompt">设置 Tag 的结果:</label>
-              <label id="tagsResult">第一条信息</label>
-            </div>
-            <div data-role="fieldcontain">
-              <label id="aliasPrompt">设置 Alias 的结果:</label>
-              <label id="aliasResult">第二条信息</label>
-            </div>
-            <div data-role="fieldcontain">
-              <label id="notificationPrompt">接受的通知内容:</label>
-              <label id="notificationResult">第三条信息</label>
-            </div>
-            <div data-role="fieldcontain">
-              <label id="messagePrompt">接受的自定义消息:</label>
-              <label id="messageResult">第四条信息</label>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+  <div>
+    <el-tabs type="border-card" class="el-tabs">
+      <el-tab-pane label="巡检工单管理" class="el-tab-pane">
+        <!--物业对巡检工单信息的展现 -->
+        <el-table
+          :data="data.filter(data => !search || data.creationTime.toLowerCase().includes(search.toLowerCase()))"
+          style="width: 100%">
+          <el-table-column
+            label="设备名称"
+            width="90"
+            prop="equipment.name">
+          </el-table-column>
+          <el-table-column
+            label="维保企业"
+            width="90"
+            prop="wbqy.username">
+          </el-table-column>
+          <el-table-column
+            width="135"
+            align="right">
+            <template slot="header" slot-scope="scope">
+              <el-input
+                v-model="search"
+                size="mini"
+                placeholder="关键字搜索"/>
+            </template>
+            <template slot-scope="scope">
+              <router-link :to="{ name: 'PatrolReminderSelect', params: { xjgdId: scope.row.id }}">
+                <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">巡检工单查看</el-button>
+              </router-link>
+            </template>
+          </el-table-column>
+        </el-table>
+      </el-tab-pane>
+    </el-tabs>
+  </div>
 </template>
-<link rel="stylesheet" href="../../../assets/property/css/jquery.mobile-1.1.1.css">
-<script type="text/javascript" src="../../../assets/property/js/jquery.js"></script>
-<script type="text/javascript" src="../../../assets/property/js/jquery.mobile-1.1.1.js"></script>
-<script type="text/javascript" src="../../../assets/property/js/cordova.js"></script>
-<script type="text/javascript" src="../../../assets/property/js/xunjian.js"></script>
+<style>
+  .el-tabs--border-card>.el-tabs__content{
+    padding: 0px;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .input-group {
+    margin-top: 2%;
+  }
+</style>
+<script>
+  export default {
+    data() {
+      return {
+        data:[],
+        search: '',
+        message: "巡检工单信息数据",
+        msg: false,
+        notnull: false
+      }
+    },
+    created(){
+      this.select();
+    },
+    methods: {
+      select: function () {
+          this.$http
+            .post(
+              "/polling/selectPollingLogByWY",
+              {},
+              {
+                headers: {
+                  'Auth-Token': JSON.parse(window.localStorage.getItem("token") || "[]").toString(),
+                  'Content-Type': 'application/json'
+                }
+              },
+              {
+                emulateJSON: true,
+              }
+            )
+            .then(res => {
+              if (res.data.code === "1") {
+                window.localStorage.setItem(
+                  "xjgd",
+                  JSON.stringify(res.data.token)
+                );
+                this.data = res.data.data;
+              } else {
+                this.$router.push({
+                  path: "/"
+                });
+                this.msg = true;
+                console.log("this is fail", res);
+              }
+            })
+            .catch(err => {
+              this.$notify({
+                title: "访问失败",
+                message: "服务器请求失败，请检查网络或联系管理员",
+                type: "error"
+              });
+              console.log(err);
+            });
+        }
+      }
+  }
+</script>

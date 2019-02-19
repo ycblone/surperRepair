@@ -63,51 +63,74 @@
               <router-link :to="{ name: 'elementEdit', params: { elementId: scope.row.id }}">
                 <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">编辑</el-button>
               </router-link>
-              <el-button type="primary" size="mini" icon="el-icon-delete" class="input-group" @click="del(scope.row.id)" :loading="loading">删除</el-button>
+              <el-button type="primary" size="mini" icon="el-icon-delete" class="input-group" @click="del(scope.row.id)">删除</el-button>
             </template>
           </el-table-column>
         </el-table>
       </el-tab-pane>
-    <el-tab-pane label="添加设备">
-
-      <!--equipmentAdd-->
-      <div style="margin-top:30px;padding:10px ;">
-
-        <div class="title">
-          <h2>设备添加</h2>
+      <el-tab-pane label="添加设备">
+        <!--equipmentAdd-->
+        <div style="margin-top:30px;padding:10px ;">
+          <div class="title">
+            <h2>设备添加</h2>
+          </div>
+          <el-input class="input-group" v-model="code" placeholder="设备编号">
+          </el-input>
+          <el-input class="input-group" v-model="name" placeholder="设备名称">
+          </el-input>
+          <el-input class="input-group" v-model="isTeZhongSheBei" placeholder="设备属性">
+          </el-input>
+          <el-input class="input-group" v-model="type" placeholder="设备类型">
+          </el-input>
+          <el-input class="input-group" v-model="miaoshu" placeholder="设备描述">
+          </el-input>
+          <el-input class="input-group" v-model="version" placeholder="规格型号">
+          </el-input>
+          <el-input class="input-group" v-model="address" placeholder="设备地址">
+          </el-input>
+          <el-input class="input-group" v-model="bumeng" placeholder="归属部门">
+          </el-input>
+          <el-input class="input-group" v-model="wbqy" placeholder="维保单位">
+          </el-input>
+          <el-input class="input-group" v-model="neiron">
+          </el-input>
+          <el-button type="primary" class="input-group btn-login" @click="add">提交</el-button>
         </div>
-        <el-input class="input-group" v-model="code" v-on:focus="errmiss"
-                  placeholder="设备编号">
-        </el-input>
-        <el-input class="input-group" v-model="name" v-on:focus="errmiss"
-                  placeholder="设备名称">
-        </el-input>
-        <el-input class="input-group" v-model="isTeZhongSheBei" v-on:focus="errmiss"
-                  placeholder="设备属性">
-        </el-input>
-        <el-input class="input-group" v-model="type" v-on:focus="errmiss"
-                  placeholder="设备类型">
-        </el-input>
-        <el-input class="input-group" v-model="miaoshu" v-on:focus="errmiss"
-                  placeholder="设备描述">
-        </el-input>
-        <el-input class="input-group" v-model="version" v-on:focus="errmiss"
-                  placeholder="规格型号">
-        </el-input>
-        <el-input class="input-group" v-model="address" v-on:focus="errmiss"
-                  placeholder="设备地址">
-        </el-input>
-        <el-input class="input-group" v-model="bumeng" v-on:focus="errmiss"
-                  placeholder="归属部门">
-        </el-input>
-        <el-input class="input-group" v-model="wbqy" v-on:focus="errmiss"
-                  placeholder="维保单位">
-        </el-input>
-        <el-input class="input-group" v-model="neiron" v-on:focus="errmiss">
-        </el-input>
-        <el-button type="primary" class="input-group btn-login" @click="add" :loading="loading">提交</el-button>
-      </div>
-    </el-tab-pane>
+      </el-tab-pane>
+      <el-tab-pane label="巡检计划管理">
+        <!--equipmentAdd-->
+        <div style="margin-top:30px;padding:10px ;">
+          <el-table
+            :data="data.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))"
+            style="width: 100%">
+            <el-table-column
+              label="设备名称"
+              width="90"
+              prop="name">
+            </el-table-column>
+            <el-table-column
+              label="维保企业"
+              width="90"
+              prop="wbqy.username">
+            </el-table-column>
+            <el-table-column
+              width="135"
+              align="right">
+              <template slot="header" slot-scope="scope">
+                <el-input
+                  v-model="search"
+                  size="mini"
+                  placeholder="关键字搜索"/>
+              </template>
+              <template slot-scope="scope">
+                <router-link :to="{ name: 'equipmentXjPlan', params: { elementId: scope.row.id }}">
+                  <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">批复</el-button>
+                </router-link>
+              </template>
+            </el-table-column>
+          </el-table>
+        </div>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -139,15 +162,10 @@
   .input-group {
     margin-top: 2%;
   }
-  .content {
-    margin: 5%;
-    /*margin-top: 40%;*/
-  }
 </style>
 
 <script>
   export default {
-
     data() {
       return {
         data:[],
@@ -164,34 +182,19 @@
         wbqy: '',
         neiron:'',
         message: "设备信息数据",
-        loading: false,
         msg: false,
         notnull: false
       }
 
     },
     created(){
-      this.select()
+      this.select();
     },
     methods: {
-      handleDelete(id) {
-        console.log(index, row);
-
-      },
-      handleClick(tab, event) {
-        console.log(tab, event);
-      },
-      errmiss: function () {
-        if (this.msg === true || this.notnull === true) {
-          this.msg = false;
-          this.notnull = false;
-        }
-      },
       del: function (id) {
         if (id === "") {
           this.notnull = true;
         } else {
-          console.log("the msg is", id)
           this.$http
             .post(
               "/equipment/delEquipment",
@@ -210,7 +213,7 @@
                   "equipment",
                   JSON.stringify(res.data.token)
                 );
-                this.$router.replace("/blackPage")
+                this.$router.replace("/deviceBlack")
               }else {
                 this.$router.push({
                   path: "/"
@@ -234,7 +237,6 @@
         if (this.code === "" || this.name === "") {
           this.notnull = true;
         } else {
-          console.log("the msg is ", this.code, this.name)
           this.$http
             .post(
               "/equipment/addEquipment",
@@ -267,7 +269,7 @@
                   JSON.stringify(res.data.token)
                 );
                 this.$router.push({
-                  path: "/index"
+                  path: "/deviceBlack"
                 });
 
               } else {
@@ -309,9 +311,7 @@
                   "equipment",
                   JSON.stringify(res.data.token)
                 );
-                this.data = res.data.data,
-                console.log("内容："+res.data.data[1].id)
-                console.log("this.msg："+res.data.msg)
+                this.data = res.data.data;
               } else {
                 this.$router.push({
                   path: "/"
@@ -329,6 +329,6 @@
               console.log(err);
             });
         }
-      },
+      }
   }
 </script>

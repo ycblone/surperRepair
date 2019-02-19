@@ -1,15 +1,33 @@
 <template>
   <div class="content">
-
     <!--equipmentAdd-->
     <div style="margin-top:30px;padding:10px ;">
-
       <div class="title">
-        <h2>添加公告</h2>
+        <h2>编辑公告</h2>
       </div>
-      <el-input class="input-group" v-model="text" placeholder="公告内容">
-      </el-input>
-      <el-button type="primary" class="input-group btn-login" @click="add" :loading="loading">提交公告</el-button>
+      <el-form ref="form" label-width="80px">
+        <el-form-item label="标题">
+          <el-input v-model="title"/>
+        </el-form-item>
+        <el-form-item label="内容">
+          <el-input v-model="content"/>
+        </el-form-item>
+        <!--<el-form-item label="图片">
+          <el-input v-model="pic"/>
+        </el-form-item>-->
+        <!--<el-form-item label="限定区域">
+          <el-radio-group v-model="sizeForm.resource" size="medium">
+            <el-radio border label="省份"></el-radio>
+            <el-radio border label="市"></el-radio>
+          </el-radio-group>
+        </el-form-item>-->
+        <el-form-item label="区域">
+          <el-input v-model="area"/>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" class="input-group btn-login" @click="edit(data.id)">编辑需求</el-button>
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </template>
@@ -19,29 +37,75 @@
     name: "add",
     data() {
       return {
-        text: '',
-        message: "公告信息数据",
-        loading: false,
+        data:'',
+        content: '',
+        title: '',
+        area: '',
+        message: "需求信息数据",
         msg: false,
         notnull: false
       };
     },
-
+    created(){
+      this.select();
+    },
     methods: {
-
-      test: function () {
-        console.log("The msg is " + this.text);
+      select: function () {
+        this.demandId = this.$route.params.demandId;
+        this.$http
+          .post(
+            "/auction/findRequirementById",
+            {
+              'id': this.demandId,
+            },
+            {
+              headers: {
+                'Auth-Token': JSON.parse(window.localStorage.getItem("token") || "[]").toString(),
+                'Content-Type': 'application/json'
+              }
+            },
+            {
+            }
+          )
+          .then(res => {
+            if (res.data.code === "1") {
+              window.localStorage.setItem(
+                "demand",
+                JSON.stringify(res.data.token)
+              );
+              this.data = res.data.data;
+              this.title = this.data.title;
+              this.content = this.data.content;
+              this.area = this.data.area;
+            } else {
+              this.$router.push({
+                path: "/"
+              });
+              this.msg = true;
+              console.log("this is fail", res);
+            }
+          })
+          .catch(err => {
+            this.$notify({
+              title: "获取需求信息失败",
+              message: "服务器请求失败，请检查网络或联系管理员",
+              type: "error"
+            });
+            console.log(err);
+          });
       },
-      add: function () {
-        if (this.text === "") {
+      edit: function (demandID) {
+        if (demandID === "") {
           this.notnull = true;
         } else {
-          console.log("the msg is ", this.text)
           this.$http
             .post(
-              "/notice/addNotice",
+              "/auction/wyPublishRequirement",
               {
-                text: this.text
+                id:demandID,
+                title: this.title,
+                content: this.content,
+                area: this.area
               },
               {
                 headers: {
@@ -56,11 +120,11 @@
             .then(res => {
               if (res.data.code === "1") {
                 window.localStorage.setItem(
-                  "announce",
+                  "demand",
                   JSON.stringify(res.data.token)
                 );
                 this.$router.push({
-                  path: "/index"
+                  path: "/demandBlack"
                 });
               } else {
                 this.$router.push({
@@ -72,7 +136,7 @@
             })
             .catch(err => {
               this.$notify({
-                title: "添加失败",
+                title: "编辑失败",
                 message: "服务器请求失败，请检查网络或联系管理员",
                 type: "error"
               });
@@ -87,12 +151,6 @@
 </script>
 
 <style scoped>
-
-  .mx {
-    background-color: blue;
-    color: #6c6c6c;
-  }
-
   .btn-login {
     width: 100%;
   }
@@ -107,6 +165,5 @@
 
   .content {
     margin: 5%;
-    /*margin-top: 40%;*/
   }
 </style>

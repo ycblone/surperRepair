@@ -21,16 +21,10 @@
               placeholder="输入关键字搜索"/>
           </template>
           <template slot-scope="scope">
-            <el-button
-              size="mini"
-              @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-            <el-button
-              size="mini"
-              @click="handleRelease(scope.$index, scope.row)">发布</el-button>
-            <el-button
-              size="mini"
-              type="danger"
-              @click="handleDelete(scope.$index, scope.row)">删除</el-button>
+            <router-link :to="{ name: 'announceEdit', params: { announceId: scope.row.id }}">
+              <el-button size="mini" type="primary" icon="el-icon-edit" class="input-group">编辑</el-button>
+            </router-link>
+            <el-button type="primary" size="mini" icon="el-icon-delete" class="input-group" @click="del(scope.row.id)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -46,7 +40,31 @@
     </el-tabs>
   </div>
 </template>
+<style>
+  .el-tabs--border-card>.el-tabs__content{
+    padding: 0px;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .btn-login {
+    width: 100%;
+  }
 
+  .title {
+    text-align: center;
+  }
+
+  .input-group {
+    margin-top: 2%;
+  }
+</style>
 <script>
   export default {
     data() {
@@ -61,20 +79,51 @@
       this.select()
     },
     methods: {
-      handleEdit(index, row) {
-        console.log(index, row);
-      },
-      handleDelete(index, row) {
-        console.log(index, row);
-      },
-      handleRelease(index, row) {
-        console.log(index, row);
+      del: function (id) {
+        if (id === "") {
+          this.notnull = true;
+        } else {
+          this.$http
+            .post(
+              "/notice/delNotice",
+              {id: id},
+              {
+                headers: {
+                  'Auth-Token': JSON.parse(window.localStorage.getItem("token") || "[]").toString(),
+                  'Content-Type': 'application/json'
+                }
+              },
+              {emulateJSON: true,}
+            )
+            .then(res => {
+              if (res.data.code === "1") {
+                window.localStorage.setItem(
+                  "announce",
+                  JSON.stringify(res.data.token)
+                );
+                this.$router.replace("/announceBlack")
+              }else {
+                this.$router.push({
+                  path: "/"
+                });
+                this.msg = true;
+                console.log("this is fail", res);
+              }
+            })
+            .catch(err => {
+              this.$notify({
+                title: "删除失败",
+                message: "服务器请求失败，请检查网络或联系管理员",
+                type: "error"
+              });
+              console.log(err);
+            });
+        }
       },
       add: function () {
         if (this.text === "") {
           this.notnull = true;
         } else {
-          console.log("the msg is ", this.text)
           this.$http
             .post(
               "/notice/addNotice",
@@ -139,8 +188,7 @@
                 "announce",
                 JSON.stringify(res.data.token)
               );
-              this.data = res.data.data,
-              console.log("this.msg："+res.data.msg);
+              this.data = res.data.data;
             } else {
               this.$router.push({
                 path: "/"
