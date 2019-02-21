@@ -24,7 +24,7 @@ Vue.use(Vant);
 Vue.use(ElementUI);
 
 Vue.config.productionTinpmp = false;
-axios.defaults.baseURL = 'http://localhost:8080/';
+// axios.defaults.baseURL = 'http://localhost:8080/';
 // axios.defaults.baseURL = 'http://192.168.43.28:8080/';
 // axios.defaults.baseURL = 'http://app.zhongtongguanglian.com:8080/';
 // axios.defaults.baseURL = 'http://www.haojunqian.cn:8080/';
