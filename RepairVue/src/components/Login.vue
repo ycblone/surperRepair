@@ -60,6 +60,10 @@
           this.$router.replace({
             path: "/company"
           });
+        } else if (this.user.role === 3) {
+          this.$router.replace({
+            path: "/Worker"
+          });
         }
       }
     },
@@ -94,12 +98,39 @@
                   "token", JSON.stringify(res.data.token)
                 );
                 if (res.data.user.role === 1) {
+                  window.JPush.setAlias({ sequence: 1, alias: res.data.user.username},
+                    (result) => {
+                      var sequence = result.sequence
+                      var alias = result.alias
+                    }, (error) => {
+                      var sequence = error.sequence
+                      var errorCode = error.code
+                    });
                   this.$router.replace({
                     path: "/index"
                   });
                 } else if (res.data.user.role === 2) {
+                  window.JPush.setAlias({ sequence: 1, alias: res.data.user.username},
+                    (result) => {
+                      var sequence = result.sequence
+                      var alias = result.alias
+                    }, (error) => {
+                      var sequence = error.sequence
+                      var errorCode = error.code
+                    });
+                  this.$router.replace({name:'companyA',query
+                      :{comDatax:res.data.user}});
+                } else if (res.data.user.role === 3) {
+                  window.JPush.setAlias({ sequence: 1, alias: res.data.user.username},
+                    (result) => {
+                      var sequence = result.sequence
+                      var alias = result.alias
+                    }, (error) => {
+                      var sequence = error.sequence
+                      var errorCode = error.code
+                    });
                   this.$router.replace({
-                    path: "/company"
+                    path: "/Worker"
                   });
                 }
 

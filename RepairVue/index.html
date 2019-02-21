@@ -3,12 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;font-src * data:;">-->
+    <!--<meta name="format-detection" content="telephone=no">-->
+    <!--<meta name="msapplication-tap-highlight" content="no">-->
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">-->
     <title>repairvue</title>
+    <!--1.assets用来放置样式、静态图片，只要src下面的组件中用到的资源就放在assets中。-->
+    <!--2.static用来放没有npm包的第三方插件，字体文件。-->
+    <!--3.assets与components同级  components下的.vue引用静态文件时，相对路径为 ../assets/wapFront-->
+    <!--<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.css">-->
+    <!--<script src="static/jquery/dist/jquery.js"></script>-->
+    <!--<script src="static/bootstrap/dist/js/bootstrap.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!--<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>-->
   </head>
   <body>
     <div id="app">
 
     </div>
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/vue/2.6.4/vue.min.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/vue-router/3.0.2/vue-router.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/element-ui/2.5.4/index.js"></script>-->
     <!-- built files will be auto injected -->
+    <!--注意这里运行的时候需要将document.addEventListener注释，因为在浏览器环境下是找不到cordova.js的也就不能监听到deviceready的事件，打包在真机上才能实现监听-->
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
+
   </body>
 </html>
+
