@@ -17,7 +17,6 @@
       <el-button type="primary" class="input-group btn-login" @click="login" :loading="loading"
                  style="margin-top: 8px">登录
       </el-button>
-      <!--<el-button type="primary" class="input-group btn-login" @click="getregid" :loading="loading">test</el-button>-->
       <p style="margin-top: 15px">没有账号？
         <router-link to="register">注册</router-link>
 
