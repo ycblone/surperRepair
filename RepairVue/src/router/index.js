@@ -30,11 +30,11 @@ import editSubAccount from "@/components/property/editSubAccount";
 import GenerateSubAccount from "@/components/property/GenerateSubAccount";
 import subAccount from "@/components/property/subAccount";
 import contractIndex from "@/components/property/contractManage/index";
-import checkHistory from "@/components/property/countCenter/checkHistory";
-import count from "@/components/property/countCenter/count";
-import equipment from "@/components/property/countCenter/equipment";
-import fault from "@/components/property/countCenter/fault";
-import replaceParts from "@/components/property/countCenter/replaceParts";
+import checkHistoryPH from "@/components/property/countCenter/checkHistory";
+import countPH from "@/components/property/countCenter/count";
+import equipmentPH from "@/components/property/countCenter/equipment";
+import faultPH from "@/components/property/countCenter/fault";
+import replacePartsPH from "@/components/property/countCenter/replaceParts";
 import PatrolReminderIndex from "@/components/property/PatrolReminder/index";
 import PatrolReminderSelect from "@/components/property/PatrolReminder/select";
 import PatrolReminderBlack from "@/components/property/PatrolReminder/black";
@@ -224,9 +224,9 @@ export default new Router({
       component: subAccount
     },
     {
-      path:"/countCenter/count",
-      name:'count',
-      component:count,
+      path:"/countCenterPH/count",
+      name:'countPH',
+      component:countPH,
       children:[
         // {
         //   path:'/',
@@ -235,26 +235,26 @@ export default new Router({
         //   }
         // },
         {
-          path:'/countCenter/fault',
-          name:'fault',
-          component:fault,
+          path:'/countCenterPH/fault',
+          name:'faultPH',
+          component:faultPH,
         },
         {
-          path:'/countCenter/checkHistory',
-          name:'checkHistory',
-          component:checkHistory
+          path:'/countCenterPH/checkHistory',
+          name:'checkHistoryPH',
+          component:checkHistoryPH
         },
         {
-          path:'/countCenter/replaceParts',
-          name:'replaceParts',
-          component:replaceParts
+          path:'/countCenterPH/replaceParts',
+          name:'replacePartsPH',
+          component:replacePartsPH
         }
       ]
     },
     {
-      path:'/countCenter/equipment',
-      name:'equipment',
-      component:equipment
+      path:'/countCenterPH/equipment',
+      name:'equipmentPH',
+      component:equipmentPH
     },
     {
       path:'/PatrolReminder/index',

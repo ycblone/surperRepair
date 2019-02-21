@@ -58,7 +58,7 @@
             </router-link>
           </van-row>
           <van-row style="margin-top: 30px">
-            <router-link to="/countCenter/count">
+            <router-link to="/countCenterPH/count">
               <van-col span="8">
                 <img src="../assets/property/image/StatisticalC.png" style="width: 70px ;height :70px"/>
                 <div>统计中心</div>

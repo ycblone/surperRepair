@@ -2,7 +2,7 @@
   <div id="count">
     <van-row type="flex" justify="space-between" style="height: 67px;background-color: darkgoldenrod;color: whitesmoke;font-size: 20px;font-weight: bold;line-height: 67px;letter-spacing:4px;" class="header">
       <van-col span="4">
-        <router-link to="/countCenter/equipment">
+        <router-link to="/countCenterPH/equipment">
           <van-icon name="arrow-left" size="1em" color="white"/>
         </router-link>
       </van-col>
@@ -23,9 +23,9 @@
       </span>
               <el-dropdown-menu slot="dropdown">
 
-                  <el-dropdown-item command="/countCenter/fault">故障统计</el-dropdown-item>
-                <el-dropdown-item command="/countCenter/replaceParts">配件更换情况</el-dropdown-item>
-                <el-dropdown-item command="/countCenter/checkHistory">巡检记录</el-dropdown-item>
+                  <el-dropdown-item command="/countCenterPH/fault">故障统计</el-dropdown-item>
+                <el-dropdown-item command="/countCenterPH/replaceParts">配件更换情况</el-dropdown-item>
+                <el-dropdown-item command="/countCenterPH/checkHistory">巡检记录</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
           </van-col>
@@ -69,7 +69,7 @@
         value1:'',
         value2:'',
         equipId:'',
-        command:'/countCenter/fault',
+        command:'/countCenterPH/fault',
         text:'',
       }
     },
@@ -108,18 +108,18 @@
       handleCommand(command){
         this.command = command;
         switch (command) {
-          case "/countCenter/fault":
+          case "/countCenterPH/fault":
             this.text = "故障统计";
-            this.$router.push({path:"/countCenter/fault",query:{equipId:this.equipId}});
+            this.$router.push({path:"/countCenterPH/fault",query:{equipId:this.equipId}});
             break;
-          case "/countCenter/replaceParts":
+          case "/countCenterPH/replaceParts":
             this.text = "配件更换情况";
-            this.$router.push({path:"/countCenter/replaceParts",query:{equipId:this.equipId}});
+            this.$router.push({path:"/countCenterPH/replaceParts",query:{equipId:this.equipId}});
 
             break;
-          case "/countCenter/checkHistory":
+          case "/countCenterPH/checkHistory":
             this.text = "巡检记录";
-            this.$router.push({path:"/countCenter/checkHistory",query:{equipId:this.equipId}});
+            this.$router.push({path:"/countCenterPH/checkHistory",query:{equipId:this.equipId}});
 
             break;
         }
