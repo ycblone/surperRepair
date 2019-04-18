@@ -15,7 +15,7 @@
       <div style="margin-top:0.3rem;">
         <el-form ref="form">
           <el-form-item label="维保企业">
-            <el-input  v-model="wbqy"/>
+            <el-input  v-model="wbqy" readonly/>
           </el-form-item>
           <el-form-item label="合同内容">
             <el-input  v-model="content"/>
@@ -67,6 +67,7 @@
         message: "合同信息数据",
         msg: false,
         notnull: false,
+        wbqyuser:''
 
       };
     },
@@ -92,6 +93,7 @@
             }
           )
           .then(res => {
+            console.log("合同",res);
             if (res.data.code === "1") {
               window.localStorage.setItem(
                 "contract",
@@ -99,6 +101,7 @@
               );
               this.data = res.data.data;
               this.wbqy = this.data.wbqy.name;
+              this.wbqyuser = this.data.wbqy.username;
               this.content = this.data.content;
               this.startDate = this.data.startDate;
               this.endDate = this.data.endDate;
@@ -138,7 +141,7 @@
               "/user/addContract",
               {
                 id:contractID,
-                wbqy: this.wbqy,
+                wbqy: this.wbqyuser,
                 content: this.content,
                 startDate: new Date(this.startDate).getTime(),
                 endDate: new Date(this.endDate).getTime(),
@@ -158,7 +161,7 @@
               }
             )
             .then(res => {
-              console.log("编辑成功"+res);
+              console.log("编辑成功",res);
               loading.close();
               if (res.data.code === "1") {
                 this.$toast.success('编辑成功');

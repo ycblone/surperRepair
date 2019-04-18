@@ -94,38 +94,43 @@
       },
       // 发起网络请求
       subPollData() {
-        const loading = this.$loading({
-          lock: true,
-          text: 'Loading',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-        });
-        // 登录时，token被存在了localStorage里，现在直接调用它做请求头
-        // console.log(JSON.parse(window.localStorage.getItem("token") || "[]").toString());
-        this.$http.post("/polling/uploadPollingResult", {
-          pollingId: this.pollId,
-          pollingEndPicUrls: this.imgData,
-          pollingMsg: this.message
-        }, {
-          headers: {
-            'Auth-Token': JSON.parse(window.localStorage.getItem("token") || "[]").toString(),
-            'Content-Type': 'application/json'
-          }
-        }).then((res) => {
-          loading.close();
-          if (res.data.code == 1) {
-            this.$toast.success('上传成功');
-            this.$router.go(-1)
-          } else {
-            this.$toast.success('上传失败');
+        if (this.imgData==''){
+          this.$toast("请上传图片！");
+        } else {
+          const loading = this.$loading({
+            lock: true,
+            text: 'Loading',
+            spinner: 'el-icon-loading',
+            background: 'rgba(0, 0, 0, 0.7)'
+          });
+          // 登录时，token被存在了localStorage里，现在直接调用它做请求头
+          // console.log(JSON.parse(window.localStorage.getItem("token") || "[]").toString());
+          this.$http.post("/polling/uploadPollingResult", {
+            pollingId: this.pollId,
+            pollingEndPicUrls: this.imgData,
+            pollingMsg: this.message
+          }, {
+            headers: {
+              'Auth-Token': JSON.parse(window.localStorage.getItem("token") || "[]").toString(),
+              'Content-Type': 'application/json'
+            }
+          }).then((res) => {
+            loading.close();
+            if (res.data.code == 1) {
+              this.$toast.success('上传成功');
+              this.$router.go(-1)
+            } else {
+              this.$toast.success('上传失败');
 
-          }
-          console.log("上传结果", res);
-        }).catch((error) => {
-          loading.close();
-          this.$toast.success('上传失败');
-          console.log(error);
-        })
+            }
+            console.log("上传结果", res);
+          }).catch((error) => {
+            loading.close();
+            this.$toast.success('上传失败');
+            console.log(error);
+          })
+        }
+
       },
       //接收传来的id
       getId() {

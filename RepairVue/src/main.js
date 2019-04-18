@@ -9,6 +9,10 @@ import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios';
 import App from './App'
 import './assets/css/header.css'
+// import 'babel-polyfill'
+// import Es6Promise from 'es6-promise'
+// require('es6-promise').polyfill()
+// Es6Promise.polyfill()
 // import echarts from 'echarts'
 
 // const Vue = require('vue')
@@ -44,7 +48,7 @@ axios.defaults.baseURL=global.BASE_URL;
 // axios.defaults.baseURL = 'http://192.168.43.28:8080/';
 // axios.defaults.baseURL = 'http://app.zhongtongguanglian.com:8080/';
 // axios.defaults.baseURL = 'http://www.haojunqian.cn:8080/';
-document.addEventListener('deviceready', function () {
+// document.addEventListener('deviceready', function () {
 // 路由守卫  在index.js中设置auth，给要判断的路径设置auth，不设置默认是false，因为要判断全部的路径所以没有设置，默认fasle的都判断
 // to指要去的路由，from指当前路由，next表示执行操作，可以跳转的意思
 router.beforeEach((to,from,next) => {
@@ -58,7 +62,6 @@ router.beforeEach((to,from,next) => {
       // console.log("先判断是否登录");
       // 如果跳转登陆注册界面的话，就直接跳转
       if(to.name=='Login' || to.name=='register'){
-
         next();
         // 如果存储的user为空，这里是不让退出用户重返之前界面
       }else if(localStorage.getItem('user')=='') {
@@ -124,12 +127,12 @@ router.beforeEach((to,from,next) => {
     components: {App},
     template: '<App/>'
   });
-  document.addEventListener("jpush.receiveRegistrationId", function (event) {
-    // alert("receiveRegistrationId" + JSON.stringify(event));
-    // $("#registrationId").html(event.registrationId);
-  }, false);
-  initiateUI();
-}, false);
+//   document.addEventListener("jpush.receiveRegistrationId", function (event) {
+//     // alert("receiveRegistrationId" + JSON.stringify(event));
+//     // $("#registrationId").html(event.registrationId);
+//   }, false);
+//   initiateUI();
+// }, false);
 
 var getRegistrationID = function() {
   window.JPush.getRegistrationID(onGetRegistrationID);

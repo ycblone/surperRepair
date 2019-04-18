@@ -31,10 +31,10 @@
         <van-cell-group>
           <van-field
             v-model="message"
-            label="维修情况反馈"
+            label="维修情况反馈："
             type="textarea"
             placeholder="请输入"
-            rows="1"
+            rows="2"
             autosize
             style="text-align: left;padding-left: 0;padding-top: 0;"
           />

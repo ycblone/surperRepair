@@ -21,7 +21,7 @@
         </van-row>
         <div slot="footer" style="">
           <van-row type="flex" justify="space-between">
-            <van-col span="6"><p @click="down(bid.pic)" v-if="bid.pic!==null" style="color: green">下载附件</p></van-col>
+            <van-col span="6"><p @click="down(bid.pic)" v-if="bid.pic!==null&&bid.pic!==''" style="color: green">下载附件</p></van-col>
             <van-col span="8"><van-button size="small" @click="sendId(bid,index)" style="width: 100%">一键竞价</van-button>
             </van-col>
             <van-col span="6"></van-col>

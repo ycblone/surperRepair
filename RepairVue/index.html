@@ -45,7 +45,7 @@
 
     </div>
     <!--注意这里运行的时候需要将document.addEventListener注释，因为在浏览器环境下是找不到cordova.js的也就不能监听到deviceready的事件，打包在真机上才能实现监听-->
-    <script type="text/javascript" src="cordova.js"></script>
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
 
   </body>
 </html>
@@ -54,3 +54,5 @@
   <!--1.父路由组件设置的样式在子路由组件中可用（类名相同的话）-->
   <!--2.复用较多的样式最好另立一个css文件，放在里面，然后引入vue文件中。方便后期修改。使代码变得优雅-->
   <!--3.console.log("设备查询",res);中间用逗号控制台的具体信息可正常显示，如果中间是+号，就有可能出现控制台只输出[object Object]的尴尬情况-->
+
+<!--在 webpack.base.conf.js文件里把entry:改了-->
