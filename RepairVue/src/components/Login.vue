@@ -136,6 +136,7 @@
 
 
               } else {
+                this.$toast(res.data.msg);
                 console.log("Login fail ", res);
                 this.msg = true;
               }
